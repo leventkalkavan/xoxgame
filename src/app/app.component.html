@@ -1,1 +1,10 @@
 <h1>XOX oyunu</h1>
+<h2 class="alert alert-warning text-center"> {{message}}</h2>
+<button class="btn btn-primary w-100" (click)="newGame()">yeni oyun</button>
+<div class="row mt-2">
+    <div (click)="setMark(index)" style="cursor: pointer; border: 1px solid #ccc; height: 120px;" class="col-md-4 text-center text-warning" *ngFor="let item of games let index = index">
+        <span style="font-size: 80px;">{{item}}</span>
+    </div>
+</div>
+<hr>
+<button class="btn btn-primary" *ngFor="let item of moves let i = index" (click)="returnSelectMove(i)">{{i + 1}}. hamle</button>
